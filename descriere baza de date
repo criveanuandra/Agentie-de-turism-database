@@ -1,0 +1,1 @@
+Am creat o baza de date cu numele"Agentie de turism" pentru a optimiza corect rezervarile facute de clienti.Am creat 3 tabele,clienti-agentie,pachete si rezervari legate cu ajutorul relatiilor one to many,many to many,one to one.Am realizat ulterior interogari prin limbajul SQL pentru a afla pretul mediu al unei rezervari,pentru a ordona rezervarile.
