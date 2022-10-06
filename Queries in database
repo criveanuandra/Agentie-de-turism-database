@@ -1,0 +1,43 @@
+Operatia de filtrare;
+SELECT * FROM `pachete` WHERE `pret_noapte` ='580';
+OPERATIA DE SORTARE;
+SELECT * FROM `pachete` ORDER BY `denumire_hotel` ASC;
+INTEROGARE PRIN PSEUDONIME;
+SELECT * FROM `pachete` WHERE `denumire_hotel` = 'Iaki'
+Operatia de comparare;
+SELECT `pret_noapte` AS PRET, `destinatie`FROM `pachete` WHERE `pret_noapte` = '750';
+OPERATORUL LIKE;
+SELECT `denumire_hotel` FROM `pachete` WHERE `denumire_hotel` LIKE '%RI%';
+OPERATORI LOGICI;
+SELECT `denumire_hotel` AS HOTEL,`pret_noapte` AS PRET, `destinatie` FROM `pachete` WHERE `pret_noapte` = '485' AND `pret_noapte` <= '660' ORDER BY `pret_noapte`;
+OPERATORUL NULL;
+SELECT `destinatie` FROM `pachete` WHERE `pret_noapte` IS NULL;
+OPERATORUL BETWEEN;
+SELECT `cod_pachete`, `destinatie` ,`denumire_hotel`,`pret_noapte` FROM `pachete` WHERE `pret_noapte` BETWEEN 650 AND 900 ORDER BY `pret_noapte`;
+FUNCTII PENTRU CARACTERE;
+SELECT UPPER(`denumire_hotel`) AS 'DENUMIRE HOTEL' FROM `pachete` WHERE `destinatie` = 'Lisabona';
+FUNCTII DE AGREGARE ;
+SELECT ROUND (AVG (`pret_noapte`),2) AS AVG_PRET FROM `pachete`;
+FUNCTII MATEMATICE ;
+SELECT ROUND (AVG(`pret_rezervari` + `avans_rezervari`),2) AS AVG_COST FROM `rezervari` WHERE `cod_pachete`= '1';
+FUNCTIA REPLACE;
+SELECT TELEFON_CLIENTI, REPLACE (TELEFON_CLIENTI, '-','.') AS TELEFON FROM CLIENTI_AGENTIE;
+ FUNCTIA FLOOR:
+ SELECT PRET_REZERVARI,FLOOR(PRET_REZERVARI) AS PRET FROM rezervari WHERE PRET_REZERVARI IS NOT NULL;
+FUNCTIA CEILING
+SELECT PRET_REZERVARI,CEILING(PRET_REZERVARI) AS PRET FROM REZERVARI WHERE PRET_REZERVARI IS NOT NULL;
+FUNCTIA SQRT:
+SELECT PRET_REZERVARI,SQRT(PRET_REZERVARI) AS PRET FROM REZERVARI WHERE PRET_REZERVARI IS NOT NULL;
+INNER JOIN:
+SELECT NUME_CLIENTI, PRENUME_CLIENTI FROM clienti_agentie INNER JOIN PACHETE USING (COD_CLIENTI);
+
+
+
+
+
+
+
+
+
+
+
