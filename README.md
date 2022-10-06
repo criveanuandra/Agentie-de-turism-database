@@ -1,3 +1,5 @@
+![alt text](designer-database-agentie-de-turism.jpg.png)
+
 Baza de date Agentie de turism
 Create database 'agentie de turism'
 CREATE TABLE `clienti_agentie` (
